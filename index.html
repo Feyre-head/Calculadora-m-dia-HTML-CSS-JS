@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Média</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=M+PLUS+1+Code:wght@100..700&family=Outfit:wght@100..900&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <header>
+          <img src="./images/logo.png" alt="Capelo e diploma" />
+          <h1>Calculadora de Média</h1>
+        </header>
+        <form>
+          <input
+            type="text"
+            name="nomeDaAtividade"
+            id="nomeDaAtividade"
+            placeholder="Nome da atividade"
+          />
+          <input
+            type="number"
+            name="notaDaAtividade"
+            id="notaDaAtividade"
+            placeholder="Nota da atividade"
+            min="0"
+            max="10"
+          />
+          <!-- min="0": Define que o valor mínimo permitido para o campo é 0. O usuário não poderá inserir um valor abaixo de 0.
+            max="10": Define que o valor máximo permitido é 10. O usuário não poderá inserir um valor acima de 10.-->
+          <button type="submit">Adicionar</button>
+        </form>
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nome da Atividade</th>
+              <th>Nota da Atividade</th>
+              <th>Aprovado?</th>
+            </tr>
+          </thead>
+          <tbody id="corpoTabela">
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Média Final</td>
+              <td id="mediaFinal">0</td>
+              <td id="resultado" >-</td>
+            </tr>
+          </tfoot>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

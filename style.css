@@ -1,97 +1,125 @@
+/* Estilo global para padronizar a fonte */
 * {
     font-family: "Roboto", serif;
     font-weight: 300;
     font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
 
-body{
-    background: #6BA3BE;
+body {
+    background-color: #28617e;
     padding-top: 100px;
 }
 
-.container{
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
     max-width: 960px;
-    width: 100%;
     margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 10px 2px hsla(194, 93%, 11%, 0.466); 
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
 }
 
-header{
+header {
+    margin: 50px auto; /* Alinha horizontalmente */
     display: flex;
     align-items: center;
     margin-bottom: 40px;
 }
 
-header img{
+header img {
     height: 36px;
     margin-right: 16px;
 }
 
-header h1{
+header h1 {
     font-size: 40px;
     font-weight: bold;
+    color: #032F30; 
 }
 
-form{
+form {
     display: flex;
     max-width: 640px;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 56px;
+    width: 100vh;
+    margin-bottom: 40px;
+    gap: 20px; /* Adicionado para espaço entre elementos */
 }
 
-form input{
+form input {
     font-size: 24px;
     background-color: #ffffff;
     border: none;
-    border-bottom: 2px solid #032F30;
+    border-bottom: 2px solid #032f3095;
     padding: 8px;
+    outline: none; /* Remove o contorno ao focar */
+    transition: border-color 0.3s; /* Adiciona transição para efeito visual */
+    border-radius: 5px;
 }
 
-form button{
-    background: #032F30;
+form input:focus {
+    border-bottom: 2px solid #081218; /* Realça ao focar no campo */
+}
+
+form button {
+    background-color: #000000fb;
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
-    border:none;
+    border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 8px 16px; /* Ajustado para maior espaçamento horizontal */
+    border-radius: 10px;
+    transition: background-color 0.3s; /* Transição para efeito visual */
 }
 
-table{
+form button:hover {
+    background-color: #6BA3BE; /* Adiciona efeito de hover */
+}
+
+/* Estilização da tabela */
+table {
+    padding: 20px;
     width: 100%;
+    border-collapse: collapse; /* Remove os espaços entre células */
+    background-color: white; /* Adicionado para consistência visual */
+    border-radius: 5px;
 }
 
-table th{
+table th {
     border-bottom: 2px solid #032F30;
     padding: 16px;
     font-size: 24px;
     font-weight: bold;
+    color: #032F30; /* Contraste para melhor leitura */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
-table td{
+table td {
     text-align: center;
     font-size: 20px;
     padding: 16px 0;
-    border-bottom: 1px solid #032f3039;
+    border-bottom: 1px solid #032f3039; /* Mantido o tom claro para a linha */
+    color: #333; /* Ajustado para contraste adequado */
 }
 
-table td img{
+table td img {
     height: 30px;
 }
 
-.resultado{
+/* Estilo do resultado (média final ou status) */
+.resultado {
     padding: 8px;
     font-weight: bold;
     color: white;
     background-color: #032F30;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px 0; /* Adiciona espaço vertical */
 }
-
-.aprovado{
-    background-color: green;
-}
-
-.reprovado{
-    background-color: red;
-}
-
-/*#031716 #032F30 #0A7075 #0C969C #6BA3BE #275D60 */
